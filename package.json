@@ -1,0 +1,19 @@
+{
+  "name": "shorty",
+  "version": "0.0.1",
+  "description": "A URL shortner written in js/node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukeshm/shorty-js.git"
+  },
+  "author": "Mukesh Munisubbanna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mukeshm/shorty-js/issues"
+  },
+  "homepage": "https://github.com/mukeshm/shorty-js#readme"
+}
