@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mukeshm/shorty-js/issues"
   },
-  "homepage": "https://github.com/mukeshm/shorty-js#readme"
+  "homepage": "https://github.com/mukeshm/shorty-js#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
