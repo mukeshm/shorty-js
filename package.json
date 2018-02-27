@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mukeshm/shorty-js#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "uuid": "^3.2.1"
   }
 }
