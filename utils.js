@@ -1,13 +1,13 @@
-const uuidv4 = require('uuid/v4')
-const DOMAIN = process.env.domain || 'localhost:8080'
+const url = require('url');
+const shortid = require('shortid');
 
-function generateCode () {
-  return uuidv4()
+function generateShortCode () {
+  return shortid.generate()
 }
+exports.generateShortCode = generateShortCode
 
-function generateShortUrl (url) {
-  console.log(generateCode())
-  console.log(DOMAIN)
-  return url
+function createShortUrl (domain, shortcode) {
+  let shorturl = new url.URL(shortcode, domain);
+  return shorturl
 }
-exports.generateShortUrl = generateShortUrl
+exports.createShortUrl = createShortUrl

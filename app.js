@@ -3,6 +3,7 @@ const app = express()
 
 const utils = require('./utils')
 const PORT = process.env.PORT || 8080
+const DOMAIN = process.env.domain || 'http://127.0.0.1:8080'
 
 app.use(express.json())
 
@@ -19,7 +20,8 @@ app.post('/shorten', [function (req, res, next) {
   }
 }, function (req, res) {
   let body = req.body
-  let shortUrl = utils.generateShortUrl(body.url)
+  let shortCode = utils.generateShortCode()
+  let shortUrl = utils.createShortUrl(DOMAIN, shortCode)
   let payload = {
     'short_url': shortUrl
   }
