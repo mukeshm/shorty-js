@@ -35,6 +35,19 @@ app.post('/shorten', [function (req, res, next) {
   })
 }])
 
+app.get('/:shortcode', function (req, res, next){
+  let shortCode = req.params.shortcode
+  persistance.getUrl(shortCode, function (err, reply){
+    if (err){
+      throw err
+    } else if (reply == null){
+      next()
+    } else {
+      res.redirect(reply.toString())
+    }
+  })
+})
+
 app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!")
 })
