@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 const app = express()
 
@@ -10,7 +11,7 @@ const DOMAIN = process.env.domain || 'http://127.0.0.1:8080'
 app.use(express.json())
 
 app.get('/', function (req, res) {
-  res.send('Hello from shorty')
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
 app.post('/shorten', [function (req, res, next) {
