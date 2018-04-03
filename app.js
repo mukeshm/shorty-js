@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 8080
 const DOMAIN = process.env.domain || 'http://127.0.0.1:8080'
 
 app.use(express.json())
+app.use(express.static('static'))
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '/public/index.html'))
