@@ -26,12 +26,9 @@ app.post('/shorten', [function (req, res, next) {
   let shortCode = utils.generateShortCode()
   let shortUrl = utils.createShortUrl(DOMAIN, shortCode)
   persistance.saveUrl(shortCode, body.url, function(){
-    let payload = {
-      'short_url': shortUrl
-    }
     let result = {
       'status': 'success',
-      payload
+      'short_url': shortUrl
     }
     res.json(result)
   })
