@@ -15,7 +15,7 @@ function shortenUrl (){
 }
 
 function displayShortUrl (url) {
-  console.log(url)
+  alert(url)
 }
 
 function displayError (reason) {
