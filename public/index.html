@@ -5,11 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Shorty</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/bulma.css">
 </head>
 <body>
-  <div>
-    <h1>Shorty</h1>
-  </div>
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h3 class="title is-2">
+            Shorty
+        </h3>
+        <input class="input" id="longURL" name="longURL" type="url" placeholder="http://www.example.com">
+        <a id="shorten" class="button is-primary is-outlined">
+            Shorten
+        </a>
+      </div>
+    </div>
+  </section>
+  <script src="/js/client.js"></script>
 </body>
 </html>
